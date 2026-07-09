@@ -38,21 +38,21 @@ interface Variant1Props {
 }
 
 const SERVICES = [
-  { icon: faFan,             label: 'AC Repair' },
-  { icon: faFire,            label: 'Heating / Furnace' },
-  { icon: faWrench,          label: 'New Installation' },
-  { icon: faFilter,          label: 'Duct Cleaning' },
-  { icon: faThermometerHalf, label: 'Maintenance' },
-  { icon: faWind,            label: 'Air Quality' },
-  { icon: faBolt,            label: 'Emergency' },
+  { icon: faFan,             label: 'Drywall Hanging' },
+  { icon: faFire,            label: 'Taping & Finishing' },
+  { icon: faWrench,          label: 'Texture Matching' },
+  { icon: faFilter,          label: 'Water Damage Drywall' },
+  { icon: faThermometerHalf, label: 'Popcorn Ceiling Removal' },
+  { icon: faWind,            label: 'Patch & Repair' },
+  { icon: faBolt,            label: 'Free Estimate' },
 ];
 
 // Compact trust chips (replaces standalone .trustStrip block)
 const TRUST_CHIPS = [
   { icon: faClock,        text: 'Same-day available' },
-  { icon: faTag,          text: 'Flat-rate pricing' },
-  { icon: faShieldHalved, text: 'NATE · TDLR' },
-  { icon: faStar,         text: '4.9★ · 300+ reviews' },
+  { icon: faTag,          text: 'Upfront pricing' },
+  { icon: faShieldHalved, text: 'Pro Drywall Crews · Insured' },
+  { icon: faStar,         text: '4.9★ · 980+ reviews' },
 ];
 
 export default function Variant1({ title, cityName, slug, spot, formVariant }: Variant1Props) {
@@ -105,7 +105,7 @@ export default function Variant1({ title, cityName, slug, spot, formVariant }: V
           <span className={styles.eyebrow}>Free Estimate · No Obligation</span>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtitle}>
-            Tell us what's going on and we'll have a licensed tech reach out — <strong>flat-rate quote, no pressure</strong>.
+            Tell us what's going on and we'll have a licensed tech reach out — <strong>upfront quote, no pressure</strong>.
           </p>
 
           {/* Inline trust chips (was a standalone .trustStrip block — merged here to save vertical space) */}
@@ -133,10 +133,10 @@ export default function Variant1({ title, cityName, slug, spot, formVariant }: V
                 </div>
                 <h3 className={styles.successTitle}>Request Received!</h3>
                 <p className={styles.successText}>
-                  A licensed Arctic Air technician will reach out shortly. Keep an eye on your inbox and phone.
+                  A LevelWall specialistnician will reach out shortly. Keep an eye on your inbox and phone.
                 </p>
                 <div className={styles.successBadges}>
-                  <span>✓ Flat-rate quote</span>
+                  <span>✓ Upfront quote</span>
                   <span>✓ No pressure</span>
                   <span>✓ Same-day available</span>
                 </div>
@@ -206,9 +206,9 @@ export default function Variant1({ title, cityName, slug, spot, formVariant }: V
                     <div className={styles.altContact}>
                       <FontAwesomeIcon icon={faPhone} />
                       <span>Need help now?{' '}
-                        <a href="tel:+12549001234"
-                          onClick={() => trackEvent({ eventType: 'phone_click', elementLabel: 'Call (254) 900-1234', section: 'ContactForm-V1' })}>
-                          Call (254) 900-1234
+                        <a href="tel:+12549701818"
+                          onClick={() => trackEvent({ eventType: 'phone_click', elementLabel: 'Call (254) 970-1818', section: 'ContactForm-V1' })}>
+                          Call (254) 970-1818
                         </a>
                       </span>
                     </div>

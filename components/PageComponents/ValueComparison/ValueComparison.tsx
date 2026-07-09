@@ -14,13 +14,13 @@ interface ValueComparisonProps {
 }
 
 const DEFAULT_ROWS: ComparisonRow[] = [
-  { feature: 'Flat-rate pricing (no hourly billing)',  us: true,  others: false },
-  { feature: '1-Year parts & labor warranty',          us: true,  others: false },
-  { feature: 'Same-day emergency service',             us: true,  others: 'Sometimes' },
+  { feature: 'Upfront pricing (no hourly billing)',  us: true,  others: false },
+  { feature: 'Smooth Finish Guarantee · 2-Year Workmanship',            us: true,  others: false },
+  { feature: 'Same-day service when available',        us: true,  others: 'Sometimes' },
   { feature: 'No service contracts required',          us: true,  others: false },
-  { feature: 'Licensed & insured technicians',         us: true,  others: true },
+  { feature: 'Bonded & insured pros',      us: true,  others: true },
   { feature: 'Upfront quote before work begins',       us: true,  others: false },
-  { feature: 'All major brands serviced',              us: true,  others: 'Sometimes' },
+  { feature: 'Patch list packaging',                us: true,  others: 'Sometimes' },
   { feature: 'Satisfaction guarantee',                 us: true,  others: false },
 ];
 
@@ -46,7 +46,7 @@ function StatusIcon({ value }: { value: boolean | string }) {
   return <span className={styles.iconMaybe}>{value}</span>;
 }
 
-export default function ValueComparison({ rows = DEFAULT_ROWS, title = 'Arctic Air vs. The Other Guys' }: ValueComparisonProps) {
+export default function ValueComparison({ rows = DEFAULT_ROWS, title = 'LevelWall vs. The Other Guys' }: ValueComparisonProps) {
   return (
     <section className={styles.section} aria-label="Value comparison">
       <div className={styles.container}>
@@ -67,15 +67,10 @@ export default function ValueComparison({ rows = DEFAULT_ROWS, title = 'Arctic A
           <div className={styles.colHeaderUs}>
             <span className={styles.colLogoMark}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <line x1="12" y1="2" x2="12" y2="22"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <polyline points="8 6 12 2 16 6"/>
-                <polyline points="8 18 12 22 16 18"/>
-                <polyline points="6 8 2 12 6 16"/>
-                <polyline points="18 8 22 12 18 16"/>
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
             </span>
-            Arctic Air
+            LevelWall
           </div>
           <div className={styles.colHeaderOthers}>Competitors</div>
         </div>
@@ -90,23 +85,12 @@ export default function ValueComparison({ rows = DEFAULT_ROWS, title = 'Arctic A
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
             >
-              <span className={styles.featureLabel}>{row.feature}</span>
-              <div className={styles.cellUs}><StatusIcon value={row.us} /></div>
-              <div className={styles.cellOthers}><StatusIcon value={row.others} /></div>
+              <span className={styles.feature}>{row.feature}</span>
+              <span className={styles.usCell}><StatusIcon value={row.us} /></span>
+              <span className={styles.othersCell}><StatusIcon value={row.others} /></span>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className={styles.bottomStrip}
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          <span className={styles.stripText}>8 for 8. No fine print.</span>
-          <a href="/contact" className={styles.stripCta}>Get Your Free Estimate →</a>
-        </motion.div>
 
       </div>
     </section>

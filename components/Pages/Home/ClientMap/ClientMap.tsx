@@ -98,7 +98,7 @@ const ClientMap: React.FC<ClientMapProps> = ({
             source: 'projects',
             paint: {
               'circle-radius': ['interpolate', ['linear'], ['get', 'count'], 1, 25, 25, 65],
-              'circle-color': '#5d7209',
+              'circle-color': '#ea580c',
               'circle-opacity': 0.7,
               'circle-pitch-alignment': 'map',
             },
@@ -263,7 +263,7 @@ const ClientMap: React.FC<ClientMapProps> = ({
       <div className={styles.mapContainer}>
         {(loading || coordsLoading) && !showFallback && (
           <div id={styles.loading}>
-            <PulseLoader size={30} color="#5d7209" />
+            <PulseLoader size={30} color="#ea580c" />
           </div>
         )}
         {showFallback && (

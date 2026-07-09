@@ -15,28 +15,27 @@ const AboutHero: React.FC<AboutHeroProps> = ({ cityName }) => {
 
       <div className={styles.heroContainer}>
 
-        {/* Text column */}
         <motion.div
           className={styles.textColumn}
           initial={{ opacity: 0, x: -32 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65, ease: 'easeOut' }}
         >
-          <span className={styles.eyebrow}>Since 2010 · {cityName}, TX</span>
+          <span className={styles.eyebrow}>Since 2009 · {cityName}, TX</span>
           <h1 className={styles.heroTitle}>
-            Central Texas HVAC<br />
+            Central Texas Drywall Contractor<br />
             <em>Done Right.</em><br />
             Every Time.
           </h1>
           <p className={styles.heroSubtitle}>
-            Arctic Air HVAC has been keeping homes and businesses comfortable in{' '}
-            <strong>{cityName}</strong> and across Central Texas for over 15 years —
-            with licensed technicians, flat-rate pricing, and a warranty on every single job.
+            LevelWall Drywall has been hanging, taping, and texturing walls in{' '}
+            <strong>{cityName}</strong> and across Central Texas since 2009 —
+            with pro drywall crews, upfront pricing, and a Smooth Finish Guarantee on every job.
           </p>
 
           <div className={styles.statRow}>
             <div className={styles.stat}>
-              <span className={styles.statNumber}>15+</span>
+              <span className={styles.statNumber}>17+</span>
               <span className={styles.statLabel}>Years Local</span>
             </div>
             <div className={styles.statDivider} aria-hidden="true" />
@@ -46,8 +45,8 @@ const AboutHero: React.FC<AboutHeroProps> = ({ cityName }) => {
             </div>
             <div className={styles.statDivider} aria-hidden="true" />
             <div className={styles.stat}>
-              <span className={styles.statNumber}>2,400+</span>
-              <span className={styles.statLabel}>Systems Serviced</span>
+              <span className={styles.statNumber}>5,000+</span>
+              <span className={styles.statLabel}>Rooms Finished</span>
             </div>
           </div>
 
@@ -56,24 +55,23 @@ const AboutHero: React.FC<AboutHeroProps> = ({ cityName }) => {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
-              TDLR Licensed
+              Pro Drywall Crews
             </span>
             <span className={styles.badge}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
-              NATE Certified
+              Bonded &amp; Insured
             </span>
             <span className={styles.badge}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
-              Fully Insured
+              2-Year Warranty
             </span>
           </div>
         </motion.div>
 
-        {/* Image column */}
         <motion.div
           className={styles.imageColumn}
           initial={{ opacity: 0, x: 32 }}
@@ -83,8 +81,8 @@ const AboutHero: React.FC<AboutHeroProps> = ({ cityName }) => {
           <div className={styles.imageFrame}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/pages/about/about-hero.jpg"
-                alt="Arctic Air HVAC — Waco, Texas HVAC technicians"
+                src="/pages/seo-template-resources/about-hero.png"
+                alt="LevelWall Drywall — Waco, Texas drywall contractor pros"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'cover' }}
@@ -92,19 +90,13 @@ const AboutHero: React.FC<AboutHeroProps> = ({ cityName }) => {
               />
               <div className={styles.imageOverlay} aria-hidden="true" />
             </div>
-            {/* Floating trust card */}
             <div className={styles.trustCard}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <line x1="12" y1="2" x2="12" y2="22"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <polyline points="8 6 12 2 16 6"/>
-                <polyline points="8 18 12 22 16 18"/>
-                <polyline points="6 8 2 12 6 16"/>
-                <polyline points="18 8 22 12 18 16"/>
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
               <div className={styles.trustCardText}>
-                <span className={styles.trustCardTitle}>Arctic Air HVAC</span>
-                <span className={styles.trustCardSub}>Waco's Most Trusted HVAC</span>
+                <span className={styles.trustCardTitle}>LevelWall Drywall</span>
+                <span className={styles.trustCardSub}>Waco&apos;s Most Trusted Drywall Contractor</span>
               </div>
             </div>
           </div>

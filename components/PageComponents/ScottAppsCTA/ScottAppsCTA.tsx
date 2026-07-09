@@ -24,14 +24,14 @@ interface ScottAppsCTAProps {
 
 const FEATURES = [
   'Send invoices in under 60 seconds',
-  'Built for small businesses & freelancers',
+  'Built for restoration partners & freelancers',
   'Automated payment reminders',
   'Professional PDF exports',
 ];
 
 const ScottAppsCTA: React.FC<ScottAppsCTAProps> = ({
   headline = 'Invoicing Software Built for Your Business',
-  subline = 'We didn\'t just build websites — we built tools. Scott Apps is our own invoicing platform designed for small businesses, freelancers, and contractors who need professional invoicing without the complexity.',
+  subline = 'We didn\'t just build websites — we built tools. Scott Apps is our own invoicing platform designed for restoration partners, freelancers, and contractors who need professional invoicing without the complexity.',
   variant = 'full',
 }) => {
   return (
@@ -71,7 +71,7 @@ const ScottAppsCTA: React.FC<ScottAppsCTAProps> = ({
 
             <div className={styles.ctaRow}>
               <Link
-                href="https://scottapps.com/invoicing"
+                href="https://levelwalldrywall.com/invoicing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.btnPrimary}
@@ -99,7 +99,7 @@ const ScottAppsCTA: React.FC<ScottAppsCTAProps> = ({
             <div className={styles.cardHeader}>
               <div className={styles.cardBrand}>
                 <FontAwesomeIcon icon={faFileInvoiceDollar} />
-                <span>scottapps.com</span>
+                <span>levelwalldrywall.com</span>
               </div>
               <div className={styles.cardBadge}>
                 <FontAwesomeIcon icon={faBolt} />

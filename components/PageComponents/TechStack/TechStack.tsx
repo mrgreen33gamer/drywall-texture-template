@@ -4,8 +4,8 @@ import styles from './styles.module.scss';
 
 interface BrandItem {
   name:     string;
-  type:     string; // 'brand' | 'cert' | 'tool'
-  icon?:    string; // emoji or short abbreviation for display
+  type:     string;
+  icon?:    string;
 }
 
 interface BrandGroup {
@@ -21,47 +21,47 @@ interface TechStackProps {
 
 const DEFAULT_GROUPS: BrandGroup[] = [
   {
-    label: 'Equipment Brands We Service',
+    label: 'Tools & Materials We Use',
     items: [
-      { name: 'Carrier',     type: 'brand', icon: '❄️' },
-      { name: 'Trane',       type: 'brand', icon: '❄️' },
-      { name: 'Lennox',      type: 'brand', icon: '❄️' },
-      { name: 'Rheem',       type: 'brand', icon: '❄️' },
-      { name: 'Goodman',     type: 'brand', icon: '❄️' },
-      { name: 'York',        type: 'brand', icon: '❄️' },
-      { name: 'Daikin',      type: 'brand', icon: '❄️' },
-      { name: 'American Standard', type: 'brand', icon: '❄️' },
+      { name: 'Gypsum Board (1/2\" & 5/8\")', type: 'brand', icon: '🧱' },
+      { name: 'Joint Compound & Tape',      type: 'brand', icon: '🧱' },
+      { name: 'Corner Bead & Trim',         type: 'brand', icon: '🧱' },
+      { name: 'Texture Sprayers',           type: 'brand', icon: '🧱' },
+      { name: 'Dust Containment',           type: 'brand', icon: '🧱' },
+      { name: 'Moisture-Resistant Board',   type: 'brand', icon: '🧱' },
+      { name: 'Patch & Texture Kits',       type: 'brand', icon: '🧱' },
+      { name: 'Finish Sanding Systems',     type: 'brand', icon: '🧱' },
     ],
   },
   {
-    label: 'Certifications & Licenses',
+    label: 'Credentials & Coverage',
     items: [
-      { name: 'NATE Certified',      type: 'cert', icon: '✓' },
-      { name: 'TDLR Licensed',       type: 'cert', icon: '✓' },
-      { name: 'EPA 608 Certified',   type: 'cert', icon: '✓' },
-      { name: 'Fully Insured',       type: 'cert', icon: '✓' },
+      { name: 'Pro Drywall Contractors', type: 'cert', icon: '✓' },
+      { name: 'Bonded & Insured',        type: 'cert', icon: '✓' },
+      { name: 'Local Owner-Led',         type: 'cert', icon: '✓' },
+      { name: 'Smooth Finish Guarantee · 2-Year Workmanship', type: 'cert', icon: '✓' },
     ],
   },
   {
-    label: 'System Types',
+    label: 'Service Types',
     items: [
-      { name: 'Central AC',          type: 'tool', icon: '🌡️' },
-      { name: 'Heat Pumps',          type: 'tool', icon: '🌡️' },
-      { name: 'Mini-Splits',         type: 'tool', icon: '🌡️' },
-      { name: 'Gas Furnaces',        type: 'tool', icon: '🌡️' },
-      { name: 'Duct Systems',        type: 'tool', icon: '🌡️' },
-      { name: 'Air Handlers',        type: 'tool', icon: '🌡️' },
+      { name: 'Drywall Hanging',         type: 'tool', icon: '🛠️' },
+      { name: 'Taping & Finishing',     type: 'tool', icon: '🛠️' },
+      { name: 'Texture Matching',       type: 'tool', icon: '🛠️' },
+      { name: 'Water Damage Drywall',   type: 'tool', icon: '🛠️' },
+      { name: 'Popcorn Removal',        type: 'tool', icon: '🛠️' },
+      { name: 'Patch & Repair',         type: 'tool', icon: '🛠️' },
     ],
   },
 ];
 
 const TechStack: React.FC<TechStackProps> = ({
-  title    = 'All Brands, All Systems',
-  subtitle = 'We service every major brand and system type — no brand-specific limitations, no excuses.',
+  title    = 'Prepared Pros, Quality Materials',
+  subtitle = 'We show up stocked for common residential repairs — bonded & insured, insured, no shortcuts on materials.',
   groups   = DEFAULT_GROUPS,
 }) => {
   return (
-    <section className={styles.section} aria-label="Brands and certifications">
+    <section className={styles.section} aria-label="Tools and credentials">
       <div className={styles.container}>
 
         <motion.div

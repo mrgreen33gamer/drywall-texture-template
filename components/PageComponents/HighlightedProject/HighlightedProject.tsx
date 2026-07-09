@@ -20,7 +20,7 @@ const HighlightedProject: React.FC<HighlightedProjectProps> = ({
   description,
   imageSrc,
   imageAlt,
-  projectLink = "https://scottapps.com/invoicing",
+  projectLink = "https://levelwalldrywall.com/invoicing",
   ctaLink = "/?pageSection=1",
 }) => {
   return (

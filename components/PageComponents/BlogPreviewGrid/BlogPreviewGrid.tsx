@@ -15,8 +15,8 @@ interface BlogPreviewGridProps {
 }
 
 const BlogPreviewGrid: React.FC<BlogPreviewGridProps> = ({
-  title       = 'HVAC Tips & Insights',
-  subtitle    = 'Practical advice for Central Texas homeowners — when to repair, when to replace, and how to save money on your energy bill.',
+  title       = 'Drywall Work Tips',
+  subtitle    = 'Practical advice for Central Texas homeowners — when to DIY, when to call a drywall pro, and how to keep small fixes from becoming big bills.',
   posts,
   count       = 4,
   viewAllLink = '/blogs',
@@ -32,7 +32,6 @@ const BlogPreviewGrid: React.FC<BlogPreviewGridProps> = ({
     <section className={styles.section} aria-label="Blog preview">
       <div className={styles.container}>
 
-        {/* ── SECTION HEADER ── */}
         <div className={styles.sectionHeader}>
           <div className={styles.headerLeft}>
             <span className={styles.eyebrow}>
@@ -50,10 +49,8 @@ const BlogPreviewGrid: React.FC<BlogPreviewGridProps> = ({
           </Link>
         </div>
 
-        {/* ── MAIN LAYOUT: featured left + numbered list right ── */}
         <div className={styles.layout}>
 
-          {/* Featured card — full-height image with overlay content */}
           <motion.div className={styles.featuredWrap}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +83,6 @@ const BlogPreviewGrid: React.FC<BlogPreviewGridProps> = ({
             </Link>
           </motion.div>
 
-          {/* Numbered article list */}
           <div className={styles.listWrap}>
             <span className={styles.listLabel}>More Articles</span>
 
@@ -121,9 +117,8 @@ const BlogPreviewGrid: React.FC<BlogPreviewGridProps> = ({
               </motion.div>
             ))}
 
-            {/* Bottom CTA */}
             <Link href={viewAllLink} className={styles.allBtn}>
-              Browse All HVAC Articles
+              Browse All Drywall Work Articles
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                 <polyline points="9 18 15 12 9 6"/>
               </svg>

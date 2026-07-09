@@ -310,12 +310,12 @@ const softwareProjects: Project[] = [
     id: 'scott-apps-invoicing',
     title: 'Scott Apps — Invoicing SaaS Platform',
     contactName: 'Joshua Feliciano',
-    client: 'Scott Applications LLC',
+    client: 'LevelWall Drywall',
     location: 'Waco, TX',
     category: 'Software',
     year: '2026',
     shortDesc:
-      'Our own SaaS product — a clean, lightning-fast invoicing tool built for small businesses, freelancers, and contractors across Texas.',
+      'Our own SaaS product — a clean, lightning-fast invoicing tool built for restoration partners, freelancers, and contractors across Texas.',
     fullDesc:
       "Scott Apps is our own product, not a client job. A dead-simple invoicing platform: create and send professional invoices in under 60 seconds, track payments, auto-send reminders, and accept cards via Stripe. Built on Next.js 15, MongoDB, and deployed on Vercel. It's live, it's used, and it proves we don't just talk tech — we ship it.",
     result: 'Live SaaS Product',
@@ -326,7 +326,7 @@ const softwareProjects: Project[] = [
       { src: '/pages/home/references/clientProfiles/scottapps/carousel/image-2.png', alt: 'Invoice creation', caption: '' },
       { src: '/pages/home/references/clientProfiles/scottapps/carousel/image-3.png', alt: 'Payment tracking', caption: '' },
     ],
-    liveUrl: 'https://scottapps.com',
+    liveUrl: 'https://levelwalldrywall.com',
   },
   {
     id: 'waco-exchange',

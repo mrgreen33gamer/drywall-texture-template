@@ -36,12 +36,11 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
             Fixed in <span className={styles.accent}>4 Simple Steps</span>
           </h2>
           <p className={styles.sub}>
-            No runaround. No hidden charges. Just fast, professional HVAC service from call to completion.
+            No runaround. No hidden charges. Just professional drywall contractor service from call to clean-up.
           </p>
         </motion.div>
 
         <div className={styles.steps}>
-          {/* Connector line */}
           <div className={styles.connectorLine} aria-hidden="true" />
 
           {steps.map((s, i) => (

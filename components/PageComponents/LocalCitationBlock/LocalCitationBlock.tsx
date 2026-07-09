@@ -24,11 +24,11 @@ const DEFAULT_HOURS: HoursEntry[] = [
 ];
 
 const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
-  businessName  = 'Arctic Air HVAC',
-  address       = 'Waco, TX 76701',
-  phone         = '(254) 900-1234',
-  email         = 'service@arcticairhvac.com',
-  googleMapsUrl = 'https://maps.google.com/?q=Arctic+Air+HVAC+Waco+TX',
+  businessName  = 'LevelWall Drywall',
+  address       = '2100 N 25th St, Waco, TX 76708',
+  phone         = '(254) 970-1818',
+  email         = 'hello@levelwalldrywall.com',
+  googleMapsUrl = 'https://maps.google.com/?q=LevelWall+Drywall Contractor+Waco+TX',
   hours         = DEFAULT_HOURS,
   cityName      = 'Waco',
 }) => {
@@ -37,7 +37,7 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
       className={styles.section}
       aria-label="Business Contact Information"
       itemScope
-      itemType="https://schema.org/HVACBusiness"
+      itemType="https://schema.org/HomeAndConstructionBusiness"
     >
       <div className={styles.container}>
 
@@ -45,13 +45,12 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
           <span className={styles.eyebrow}>Find Us</span>
           <h2 className={styles.title} itemProp="name">{businessName}</h2>
           <p className={styles.subtitle}>
-            Based in {cityName}, TX — serving all of Central Texas with licensed HVAC technicians.
+            Based in {cityName}, TX — serving all of Central Texas with bonded & insured drywall contractor pros.
           </p>
         </div>
 
         <div className={styles.grid}>
 
-          {/* Address */}
           <div className={styles.card}>
             <div className={styles.cardIcon} aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -67,8 +66,7 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
                 itemScope
                 itemType="https://schema.org/PostalAddress"
               >
-                <span itemProp="addressLocality">{cityName}</span>,{' '}
-                <span itemProp="addressRegion">TX</span>
+                <span itemProp="streetAddress">{address}</span>
               </p>
               <Link
                 href={googleMapsUrl}
@@ -78,15 +76,12 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
               >
                 Get Directions
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
+                  <polyline points="9 18 15 12 9 6"/>
                 </svg>
               </Link>
             </div>
           </div>
 
-          {/* Phone */}
           <div className={styles.card}>
             <div className={styles.cardIcon} aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -95,18 +90,13 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
             </div>
             <div className={styles.cardBody}>
               <span className={styles.cardLabel}>Phone</span>
-              <Link
-                href={`tel:+1${phone.replace(/\D/g, '')}`}
-                className={`${styles.cardValue} ${styles.phoneValue}`}
-                itemProp="telephone"
-              >
+              <a href={`tel:+1${phone.replace(/\D/g, '')}`} className={styles.cardValue} itemProp="telephone">
                 {phone}
-              </Link>
-              <span className={styles.cardHint}>Available 7 days a week</span>
+              </a>
+              <span className={styles.emergency}>Same-day when available</span>
             </div>
           </div>
 
-          {/* Email */}
           <div className={styles.card}>
             <div className={styles.cardIcon} aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -116,18 +106,12 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
             </div>
             <div className={styles.cardBody}>
               <span className={styles.cardLabel}>Email</span>
-              <Link
-                href={`mailto:${email}`}
-                className={`${styles.cardValue} ${styles.emailValue}`}
-                itemProp="email"
-              >
+              <a href={`mailto:${email}`} className={styles.cardValue} itemProp="email">
                 {email}
-              </Link>
-              <span className={styles.cardHint}>Reply within 1 business day</span>
+              </a>
             </div>
           </div>
 
-          {/* Hours */}
           <div className={styles.card}>
             <div className={styles.cardIcon} aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -137,13 +121,11 @@ const LocalCitationBlock: React.FC<LocalCitationBlockProps> = ({
             </div>
             <div className={styles.cardBody}>
               <span className={styles.cardLabel}>Hours</span>
-              <ul className={styles.hoursList} itemProp="openingHours">
-                {hours.map((h, i) => (
-                  <li key={i} className={styles.hoursItem}>
-                    <span className={styles.hoursDays}>{h.days}</span>
-                    <span className={`${styles.hoursTime} ${h.hours === 'Closed' ? styles.closed : h.hours.includes('Emergency') ? styles.emergency : ''}`}>
-                      {h.hours}
-                    </span>
+              <ul className={styles.hoursList}>
+                {hours.map((h) => (
+                  <li key={h.days}>
+                    <span>{h.days}</span>
+                    <span>{h.hours}</span>
                   </li>
                 ))}
               </ul>

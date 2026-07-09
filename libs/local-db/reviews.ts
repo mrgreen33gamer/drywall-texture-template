@@ -1,8 +1,5 @@
 // libs/local-db/reviews.ts
-// ─────────────────────────────────────────────────────────────────────────────
-// Static testimonials for Arctic Air HVAC — used by Testimonials component,
-// schema markup, and aggregate rating in layout.tsx.
-// ─────────────────────────────────────────────────────────────────────────────
+// Static testimonials for LevelWall Drywall
 
 export interface Review {
   name:     string;
@@ -19,64 +16,64 @@ const reviews: Review[] = [
     location: 'Waco, TX',
     rating:   5,
     date:     'March 2026',
-    service:  'AC Replacement',
-    text:     "Our old unit finally gave out in the middle of a Texas summer. Arctic Air had a new system installed within 48 hours. The tech explained everything clearly, pricing was upfront, and the house has never been this comfortable. I can't recommend them enough.",
+    service:  'Drywall Hanging',
+    text:     "LevelWall hung and finished three bedrooms in our remodel. Boards were tight, seams invisible after paint, and they left the house clean. Mitch's crew is solid — 5,000+ rooms finished shows.",
   },
   {
     name:     'Sandra K.',
     location: 'Hewitt, TX',
     rating:   5,
     date:     'February 2026',
-    service:  'Heating Repair',
-    text:     'Woke up at 6am to a cold house with the heater completely out. Called Arctic Air and they had someone at my door by 9am. Fixed the same day, fair price. This is the kind of service you tell your neighbors about.',
+    service:  'Taping & Finishing',
+    text:     'Kids put two big holes in the hallway and the previous patch showed. LevelWall re-taped, floated to Level 4, and texture-matched the orange peel. You cannot tell anything happened.',
   },
   {
     name:     'James R.',
     location: 'Woodway, TX',
     rating:   5,
     date:     'January 2026',
-    service:  'Annual Maintenance Plan',
-    text:     'Been on their maintenance plan for two years now. They come out twice a year, always on time, always thorough. Caught a refrigerant issue last fall before it became a $3,000 emergency. The plan pays for itself every single year.',
+    service:  'Texture Matching',
+    text:     'Knockdown match after a plumbing cut-out looked impossible. LevelWall nailed the pattern so paint blended perfectly. Fair price and on time.',
   },
   {
     name:     'Patricia L.',
-    location: 'Robinson, TX',
+    location: 'Temple, TX',
     rating:   5,
     date:     'December 2025',
-    service:  'New Installation',
-    text:     'Had three companies quote us. Arctic Air was honest about what size system we actually needed — not just upselling the biggest unit. The install was clean, fast, and our energy bill dropped by almost 30% the first month.',
+    service:  'Water Damage Drywall',
+    text:     'Ceiling leak wrecked two rooms. LevelWall demoed the bad board, dried the cavity, hung new drywall, and finished smooth. Insurance paperwork was straightforward.',
   },
   {
     name:     'David M.',
-    location: 'China Spring, TX',
+    location: 'Killeen, TX',
     rating:   5,
     date:     'November 2025',
-    service:  'Duct Cleaning',
-    text:     'We had duct cleaning done before winter and the difference in air quality was immediate. My wife has allergies and she said it was the best she\'d breathed indoors in years. Great crew, very professional, left the house spotless.',
+    service:  'Popcorn Ceiling Removal',
+    text:     'Took down popcorn in the living room and hallway, skim-coated smooth, and left it paint-ready. Huge upgrade — worth every penny.',
   },
   {
     name:     'Angela W.',
-    location: 'Temple, TX',
+    location: 'China Spring, TX',
     rating:   5,
     date:     'October 2025',
-    service:  'AC Repair',
-    text:     'AC went down on a Friday afternoon. I expected to wait all weekend but they came out Friday evening, diagnosed the problem fast, and had the part the next morning. No after-hours gouge either — totally fair rate. My new HVAC company for life.',
+    service:  'Patch & Repair',
+    text:     'Door kick, picture hangers, and a soft corner all fixed in one afternoon. Bonded, respectful of the house, and the 2-year workmanship guarantee gives peace of mind.',
   },
   {
     name:     'Robert H.',
-    location: 'Killeen, TX',
+    location: 'Bellmead, TX',
     rating:   5,
     date:     'September 2025',
-    service:  'Smart Thermostat Install',
-    text:     'Got a Nest installed and properly configured by Arctic Air. They set up the schedule for our family and showed us how to use the app. The tech was patient and knowledgeable — didn\'t feel rushed at all. Highly recommend.',
+    service:  'Property Management',
+    text:     'We use LevelWall for make-ready drywall across our rental units. Fast turnaround, consistent texture, and one invoice property managers understand.',
   },
   {
     name:     'Cheryl B.',
-    location: 'Waco, TX',
+    location: 'McGregor, TX',
     rating:   5,
     date:     'August 2025',
-    service:  'Emergency Repair',
-    text:     'Called them at 10pm on a 102-degree day when our AC died. They answered immediately, had someone out within the hour, and fixed it that night. I have two small kids at home — this company genuinely saved us. Thank you.',
+    service:  'Drywall Hanging',
+    text:     'New garage suite hung, taped, and textured to match the main house. Professional, priced fairly, finished on schedule. Smooth Finish Guarantee sealed the deal.',
   },
 ];
 
