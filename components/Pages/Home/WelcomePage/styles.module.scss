@@ -377,3 +377,28 @@
 }
 
 /* end identity layer */
+
+/* === HERO PATTERN UNIQUENESS — drywall-texture-template === */
+.hero {
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: repeating-linear-gradient(49deg, transparent, transparent 14px, rgba($orange, 0.03) 14px, rgba($orange, 0.03) 15px),
+      repeating-linear-gradient(139deg, transparent, transparent 14px, rgba($white, 0.02) 14px, rgba($white, 0.02) 15px) !important;
+    background-size: auto !important;
+    opacity: 0.93 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+
+  &::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: radial-gradient(ellipse 50% 40% at 29% 15%, rgba($orange, 0.058), transparent 70%), radial-gradient(ellipse 40% 50% at 99% 51%, rgba($white, 0.03), transparent 65%) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+}
+/* end hero pattern */
