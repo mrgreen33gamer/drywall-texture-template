@@ -1,7 +1,4 @@
-// Arctic Air HVAC — Services Overview
-// Order: Breadcrumb → SectionIntro → TrustBar → ServiceCards → WhatToExpect
-//        → ImpactMetrics → WhyChooseUs → ProcessTimeline → GuaranteeSection
-//        → Testimonials → LocalServiceAreas → ValueComparison → FAQ → CTABanner → Form
+// LevelWall Drywall — Services Overview
 "use client";
 
 import styles from "./page.module.scss";
@@ -24,153 +21,111 @@ import CTABanner           from "#/PageComponents/CTABanner/CTABanner";
 import Variant2            from "#/PageComponents/ContactForms/Variant2/Form";
 
 import {
-  faFan, faFire, faWrench, faFilter, faThermometerHalf, faWind,
+  faLayerGroup, faBrush, faSprayCan, faWater, faBorderAll, faClipboardList,
   faTrophy, faChartLine, faClock,
   faHeadset, faSearch, faFileContract, faCheckCircle,
-  faShieldHalved, faLock, faRotateLeft, faBolt,
+  faLock, faRotateLeft, faTag, faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServicesPage() {
 
   const services = [
-    { icon: faFan,            title: "AC Repair",          body: "Fast, accurate diagnosis on all brands. Same-day service available — we stock common parts on every truck.",                           link: "/services/ac-repair" },
-    { icon: faFire,           title: "Heating Service",    body: "Furnace repair, heat pump service, and emergency heating calls across Central Texas — 7 days a week.",                                 link: "/services/heating" },
-    { icon: faWrench,         title: "New Installation",   body: "Right-sized system selection, clean installation, and full commissioning. Financing available for qualified homeowners.",               link: "/services/installation" },
-    { icon: faFilter,         title: "Duct Cleaning",      body: "Full duct cleaning and sanitizing for improved air quality and system efficiency. A real difference for allergy sufferers.",           link: "/services/duct-cleaning" },
-    { icon: faThermometerHalf, title: "Maintenance Plans", body: "Twice-yearly tune-ups that prevent breakdowns and keep your warranty valid. Month-to-month — no contracts.",                          link: "/services/maintenance" },
-    { icon: faWind,           title: "Indoor Air Quality", body: "Air purifiers, UV lights, whole-home humidifiers, and filtration upgrades that make your home healthier every day.",                   link: "/services/indoor-air-quality" },
+    { icon: faLayerGroup, title: "Drywall Hanging", body: "Straight hangs, tight joints, and square corners for remodels and new construction.", link: "/services/drywall-hanging" },
+    { icon: faBrush, title: "Taping & Finishing", body: "Tape, mud, and sand through Level 4/5 for paint-ready walls and ceilings.", link: "/services/taping-finishing" },
+    { icon: faSprayCan, title: "Texture Matching", body: "Orange peel, knockdown, skip trowel, and smooth — blended so patches disappear.", link: "/services/texture-matching" },
+    { icon: faWater, title: "Water Damage Drywall", body: "Cut-out, dry cavity, hang, tape, and finish after leaks or storms.", link: "/services/water-damage-drywall" },
+    { icon: faBorderAll, title: "Popcorn Ceiling Removal", body: "Safe scrape, skim, and smooth finish for a modern paint-ready ceiling.", link: "/services/popcorn-removal" },
+    { icon: faClipboardList, title: "Patch & Repair", body: "Holes, cracks, corner bead, and nail pops with texture match.", link: "/services/patch-repair" },
   ];
 
   const expectations = [
-    { icon: faSearch,       title: "Free Diagnostic Visit",       description: "We inspect your system and explain exactly what's wrong with a flat-rate price before anything is touched. Diagnostic fee waived when you proceed." },
-    { icon: faCheckCircle,  title: "Upfront Flat-Rate Pricing",   description: "No hourly billing, no surprise fees. You approve the price before we start — and it never changes mid-job." },
-    { icon: faShieldHalved, title: "NATE-Certified Technicians",  description: "Every tech is NATE-certified, background-checked, and licensed in Texas. You know exactly who is coming to your home." },
-    { icon: faWrench,       title: "1-Year Parts & Labor Warranty", description: "Every repair we complete is backed by a full year of coverage on both parts and labor. No fine print." },
+    { icon: faSearch, title: "Clear Guidance First", description: "We explain hang vs patch, finish levels, and texture options before you commit." },
+    { icon: faCheckCircle, title: "Upfront, Written Pricing", description: "No hourly billing surprises. You approve the price before we start." },
+    { icon: faShieldHalved, title: "Pro Drywall Crews", description: "Trained hang, tape, and texture crews. Bonded and insured on every job." },
+    { icon: faTag, title: "Smooth Finish Guarantee · 2-Year Workmanship", description: "Labor covered for two years. If our finish fails, we make it right." },
   ];
 
   const metrics = [
-    { icon: faTrophy,    value: 2400, label: "Homes and businesses served since 2010", suffix: "+", duration: 3 },
-    { icon: faChartLine, value: 98,   label: "Customer satisfaction rating",            suffix: "%", duration: 2 },
-    { icon: faClock,     value: 15,   label: "Years serving Waco and Central Texas",    suffix: "+", duration: 2 },
+    { icon: faTrophy, value: 5000, label: "Rooms finished since 2009", suffix: "+", duration: 3 },
+    { icon: faChartLine, value: 98, label: "Customer satisfaction rating", suffix: "%", duration: 2 },
+    { icon: faClock, value: 17, label: "Years serving Central Texas", suffix: "+", duration: 2 },
   ];
 
   const whyFeatures = [
-    { icon: faBolt,          title: "Same-Day & Emergency Service",  description: "We staff for Central Texas summers. Emergency calls get answered and dispatched within the hour — evenings and weekends included." },
-    { icon: faHeadset,       title: "No Contracts, Ever",            description: "Our maintenance plans are month-to-month. Our repairs have no service agreements. You hire us because we do great work — not because you're locked in." },
-    { icon: faShieldHalved,  title: "Financing Available",           description: "New system replacement doesn't have to break the bank. We offer flexible financing options for qualified homeowners — ask us for details." },
+    { icon: faHeadset, title: "A Real Person Answers", description: "Call or text and reach a real LevelWall team member — not a call center." },
+    { icon: faShieldHalved, title: "No Contracts, Ever", description: "No subscription required. You hire us because the finish is done right." },
+    { icon: faLock, title: "Bonded & Insured", description: "Pro drywall contractors fully insured. Proof available on request." },
   ];
 
   const processSteps = [
-    { number: 1, title: "Schedule",  description: "Call, text, or book online. We'll confirm a time that fits your schedule — usually same-day.", icon: faHeadset },
-    { number: 2, title: "Diagnose",  description: "Tech arrives on time, inspects your system, and explains the problem clearly — no pressure.",   icon: faSearch },
-    { number: 3, title: "Quote",     description: "Flat-rate written quote before any work starts. No surprises, no hidden fees.",                  icon: faFileContract },
-    { number: 4, title: "Fix",       description: "Completed with quality parts, site left clean, backed by our 1-year parts and labor warranty.", icon: faCheckCircle },
+    { number: 1, title: "Call or Book", description: "Phone, text, or online form. Share photos of walls or ceilings.", icon: faHeadset },
+    { number: 2, title: "Scope On-Site", description: "We confirm board, finish level, and texture before quoting.", icon: faSearch },
+    { number: 3, title: "Upfront Quote", description: "Written price before any work. You decide — zero pressure.", icon: faFileContract },
+    { number: 4, title: "Finish & Guarantee", description: "Clean job, debris hauled, Smooth Finish Guarantee · 2-Year Workmanship.", icon: faCheckCircle },
   ];
 
   const guarantees = [
-    { icon: faFileContract, title: "Flat-Rate Pricing",            description: "The price you approve is the price you pay. No hourly billing, no change orders mid-job." },
-    { icon: faRotateLeft,   title: "1-Year Repair Warranty",       description: "Every repair is backed by a full year of parts and labor coverage. No fine print." },
-    { icon: faHeadset,      title: "Real People Answer the Phone", description: "Call us at 10pm in July and someone in Waco answers. No call centers, no hold queues." },
-    { icon: faLock,         title: "Licensed, Bonded & Insured",   description: "TDLR-licensed, fully bonded, and insured. License number available on request." },
+    { icon: faTag, title: "Upfront Pricing, Always", description: "The written price you approve is the price you pay." },
+    { icon: faShieldHalved, title: "Smooth Finish Guarantee · 2-Year Workmanship", description: "If our labor fails within two years, we fix it." },
+    { icon: faRotateLeft, title: "Satisfaction Guarantee", description: "Not happy with the finish? We return to make it right." },
+    { icon: faLock, title: "Pro Drywall · Bonded & Insured", description: "Documentation available on request." },
   ];
 
   const localAreas = [
-    { town: "Waco",         benefit: "Home base — best availability and fastest response in the city.", badge: "Home Base" },
-    { town: "Hewitt",       benefit: "Full residential and commercial service coverage.",                badge: "" },
-    { town: "Woodway",      benefit: "Same-day availability for Woodway-area homes.",                   badge: "" },
-    { town: "Robinson",     benefit: "Regular route — quick turnaround for Robinson customers.",        badge: "" },
-    { town: "China Spring", benefit: "Rural coverage with no trip charge for most locations.",          badge: "" },
-    { town: "Temple",       benefit: "Full service coverage for Bell County homes and businesses.",     badge: "" },
+    { town: "Waco", benefit: "Home base — fastest scheduling for hang, tape, and texture.", badge: "Home Base" },
+    { town: "Hewitt", benefit: "Full residential coverage.", badge: "" },
+    { town: "Woodway", benefit: "Regular availability for remodels and popcorn removal.", badge: "" },
+    { town: "Temple", benefit: "Regular service area — quick turnaround.", badge: "" },
+    { town: "Killeen", benefit: "Full coverage for Killeen and Fort Cavazos area.", badge: "" },
+    { town: "China Spring", benefit: "Rural coverage with no trip charge for most addresses.", badge: "" },
   ];
 
   const comparisonRows = [
-    { feature: "Flat-rate upfront pricing",       us: "✅ Always",         others: "❌ Hourly + surprise fees" },
-    { feature: "1-year parts & labor warranty",   us: "✅ Every repair",   others: "❌ Parts only, or none" },
-    { feature: "NATE-certified technicians",      us: "✅ All techs",      others: "❌ Varies" },
-    { feature: "No service contracts required",   us: "✅ Always",         others: "❌ Often required" },
-    { feature: "Emergency & same-day available",  us: "✅ 7 days a week",  others: "❌ Business hours only" },
+    { feature: "Upfront, written pricing", us: "✅ Always", others: "❌ Vague estimates" },
+    { feature: "Smooth Finish Guarantee · 2-Year Workmanship", us: "✅ Every job", others: "❌ Rare or none" },
+    { feature: "Pro drywall crews", us: "✅ All crews", others: "❌ Not always" },
+    { feature: "No service contracts required", us: "✅ Always", others: "❌ Sometimes required" },
+    { feature: "Texture matching standard", us: "✅ Yes", others: "❌ Often extra" },
   ];
 
   const faq = [
-    { question: "How much does HVAC service cost in Waco?",         answer: "Repairs typically range from $150–$800 depending on the issue. New system installation runs $4,500–$12,000 depending on size and type. We always provide a flat-rate written quote before any work begins." },
-    { question: "Do you work on all HVAC brands?",                  answer: "Yes — all major brands including Carrier, Trane, Lennox, Rheem, Goodman, York, and more. We install Carrier and Trane as our primary brands for new systems." },
-    { question: "What does your maintenance plan include?",          answer: "Two visits per year — spring cooling tune-up and fall heating tune-up. Each includes a 20-point inspection, cleaning, filter check, refrigerant check, electrical check, and written report. Month-to-month, cancel anytime." },
-    { question: "Are you available for emergency calls?",            answer: "Yes — 7 days a week including evenings. We understand a broken AC in July is a genuine emergency. Emergency calls are dispatched within the hour." },
-    { question: "How long does a full AC replacement take?",         answer: "Most residential replacements take 4–6 hours. We carry common unit sizes in stock, so most installs happen the same week you request them — often same or next day." },
+    { question: "How much does drywall work cost in Waco?", answer: "Pricing depends on square footage, finish level, and texture. Small patches often start in the low hundreds. Call (254) 970-1818 for a free estimate." },
+    { question: "Are your crews bonded and insured?", answer: "Yes — LevelWall Drywall uses pro drywall contractors who are bonded and insured." },
+    { question: "Do you offer free estimates?", answer: "Yes — free estimates across our service area. Call (254) 970-1818." },
+    { question: "What areas do you serve?", answer: "Waco, Hewitt, Woodway, McGregor, China Spring, Bellmead, Temple, Killeen, and most of Central Texas within about 60 miles of Waco." },
+    { question: "Do you offer a warranty?", answer: "Yes — Smooth Finish Guarantee · 2-Year Workmanship on completed labor." },
+    { question: "How do I get a quote?", answer: "Call, text, or fill out our online form. We'll confirm scope and provide written pricing before any work starts." },
   ];
 
   return (
-    <>
-      <Breadcrumb crumbs={[
-        { label: "Home",     href: "/" },
-        { label: "Services" },
-      ]} />
-
+    <main className={styles.pageWrapper}>
+      <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Services" }]} />
       <SectionIntro
-        title="HVAC Services for Waco & Central Texas"
-        subtitle="Repair, replacement, maintenance, and air quality — done right, priced fairly, backed by a 1-year warranty on every job."
+        title="Drywall Services in Waco, TX"
+        subtitle="Hanging, taping & finishing, texture matching, water damage drywall, popcorn ceiling removal, and patch & repair — pro crews, upfront quotes, Smooth Finish Guarantee · 2-Year Workmanship."
       />
-
-      <TrustBar headline="Trusted by 2,400+ Central Texas homes and businesses since 2010" />
-
-      <div className={styles.section}>
-        <ServiceCardComponent heading="What We Do" cards={services} />
-      </div>
-
-      <div className={styles.section}>
-        <WhatToExpect sectionTitle="How Every Service Call Works" expectations={expectations} />
-      </div>
-
-      <div className={styles.section}>
-        <ImpactMetrics title="Results That Speak for Themselves" metrics={metrics} cityName="Waco" />
-      </div>
-
-      <div className={styles.section}>
-        <WhyChooseUs cityName="Waco" features={whyFeatures} title="Why Central Texas Chooses Arctic Air" />
-      </div>
-
-      <div className={styles.section}>
-        <ProcessTimeline steps={processSteps} />
-      </div>
-
-      <div className={styles.section}>
-        <GuaranteeSection guarantees={guarantees} />
-      </div>
-
-      <div className={styles.section}>
-        <Testimonials testimonials={reviews} />
-      </div>
-
-      <div className={styles.section}>
-        <LocalServiceAreas cityName="Waco" areas={localAreas} servicePath="services" title="Serving All of Central Texas" />
-      </div>
-
-      <div className={styles.section}>
-        <ValueComparison rows={comparisonRows} />
-      </div>
-
-      <div className={styles.section}>
-        <FAQ cityName="Waco" faq={faq} title="HVAC Service FAQs" />
-      </div>
-
+      <TrustBar headline="5,000+ rooms · 4.9★ from 980+ reviews · Bonded & insured" />
+      <div className={styles.section}><ServiceCardComponent heading="Our Services" subheading="Hang · tape · texture · repair — done level." cards={services} /></div>
+      <div className={styles.section}><WhatToExpect expectations={expectations} /></div>
+      <div className={styles.section}><ImpactMetrics metrics={metrics} cityName="Waco" /></div>
+      <div className={styles.section}><WhyChooseUs cityName="Waco" features={whyFeatures} /></div>
+      <div className={styles.section}><ProcessTimeline steps={processSteps} /></div>
+      <div className={styles.section}><GuaranteeSection guarantees={guarantees} /></div>
+      <div className={styles.section}><Testimonials testimonials={reviews} /></div>
+      <div className={styles.section}><LocalServiceAreas cityName="Waco" areas={localAreas} /></div>
+      <div className={styles.section}><ValueComparison rows={comparisonRows} /></div>
+      <div className={styles.section}><FAQ cityName="Waco" faq={faq} /></div>
       <CTABanner
-        headline="Ready to Schedule Your Service?"
-        subline="Same-day and emergency service available. Flat-rate pricing, 1-year warranty, no contracts ever."
-        primaryText="Call Us Now"
-        primaryLink="tel:+12549001234"
-        secondaryText="Schedule Online"
+        headline="Ready for a Free Estimate?"
+        subline="Upfront quotes. Pro drywall crews. Call (254) 970-1818."
+        primaryText="Call (254) 970-1818"
+        primaryLink="tel:+12549701818"
+        secondaryText="Book Online"
         secondaryLink="/contact"
       />
-
       <div className={styles.section}>
-        <Variant2
-          title="Request a Service or Free Estimate"
-          cityName="Waco"
-          slug="services"
-          spot="services-page-form"
-          formVariant={2}
-        />
+        <Variant2 title="Request a Free Estimate" cityName="Waco" slug="services" spot="services-index-form" formVariant={1} />
       </div>
-    </>
+    </main>
   );
 }

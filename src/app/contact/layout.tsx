@@ -1,38 +1,28 @@
-// src/app/contact/layout.tsx
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hvac-pro-template.vercel.app';
-const url = `${BASE_URL}/contact`;
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.levelwalldrywall.com";
 
 export const metadata: Metadata = {
-  title: 'Contact Arctic Air HVAC | Schedule Service in Waco & Central Texas',
+  title: "Contact LevelWall Drywall | Schedule Service in Waco & Central Texas",
   description:
-    'Contact Arctic Air HVAC to schedule AC repair, heating service, or a free estimate. Serving Waco, Hewitt, Killeen, Temple, and all of Central Texas. Call (254) 900-1234.',
+    "Contact LevelWall Drywall to schedule drywall hanging, taping, texture matching, or a free estimate. Serving Waco, Hewitt, Killeen, Temple, and all of Central Texas. Call (254) 970-1818.",
   keywords: [
-    'contact Arctic Air HVAC',
-    'HVAC service Waco TX',
-    'schedule AC repair Waco',
-    'HVAC estimate Central Texas',
-    'Arctic Air contact',
-    '254-900-1234',
+    "contact LevelWall Drywall",
+    "drywall estimate Waco",
+    "schedule drywall repair",
+    "LevelWall contact",
   ],
-  alternates: { canonical: url },
+  alternates: { canonical: `${BASE_URL}/contact` },
   openGraph: {
-    title: 'Contact Arctic Air HVAC | Schedule Service in Waco & Central Texas',
-    description:
-      'Call, text, or submit a request. Same-day service available. Flat-rate pricing, 1-year warranty, NATE-certified techs.',
-    url,
-    siteName: 'Arctic Air HVAC',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact Arctic Air HVAC | Waco & Central Texas',
-    description: 'Schedule HVAC service or get a free estimate. Call (254) 900-1234.',
+    title: "Contact LevelWall Drywall | Waco & Central Texas",
+    description: "Schedule hang, tape, texture, or patch service. Call (254) 970-1818.",
+    url: `${BASE_URL}/contact`,
+    siteName: "LevelWall Drywall",
+    locale: "en_US",
+    type: "website",
   },
 };
 
-export default function ContactLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
 }
