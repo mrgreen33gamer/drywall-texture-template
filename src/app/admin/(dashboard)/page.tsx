@@ -62,7 +62,7 @@ async function fetchOverview(range: Range): Promise<OverviewData | null> {
 }
 
 const STATUS_COLOR: Record<string, string> = {
-  new: '#f97316', contacted: '#378add', qualified: '#27ef27',
+  new: '#ea580c', contacted: '#378add', qualified: '#27ef27',
   converted: '#5dcaa5', lost: 'rgba(255,255,255,0.28)',
 };
 
@@ -78,7 +78,7 @@ export default function AdminOverviewPage() {
     const result = await fetchOverview(range);
     if (result) {
       const serialized = JSON.stringify(result);
-      // Only update state if data actually changed — avoids destroying/remounting Chart.js canvases
+      // Only update state if data actually changed — avoids destroying/redrywall repair Chart.js canvases
       if (serialized !== prevDataRef.current) {
         prevDataRef.current = serialized;
         setData(result);
@@ -218,7 +218,7 @@ export default function AdminOverviewPage() {
                     <div style={{
                       height: '100%',
                       width: `${Math.round((item.count / statusTotal) * 100)}%`,
-                      background: STATUS_COLOR[item.status] ?? '#f97316',
+                      background: STATUS_COLOR[item.status] ?? '#ea580c',
                       borderRadius: 2,
                       transition: 'width 0.5s ease',
                     }} />

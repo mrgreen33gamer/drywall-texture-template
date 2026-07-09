@@ -1,16 +1,11 @@
 // src/app/globalVariables.scss
 // ─────────────────────────────────────────────────────────────────────────────
-// Arctic Air HVAC — Brand Tokens
+// LevelWall Drywall — Brand Tokens
 //
 // THREE DISTINCT FONTS:
 //   $titleFont  → Barlow Condensed  — bold condensed display (hero h1, section titles)
 //   $headerFont → Outfit            — clean geometric sans   (nav, card titles, labels, CTAs)
 //   $textFont   → Inter             — refined humanist sans  (body copy, form text, paragraphs)
-//
-// Usage guide:
-//   h1, .hero headline              → $titleFont  (uppercase, tight tracking)
-//   h2, h3, nav links, btn text     → $headerFont (medium weight, normal case)
-//   p, label, input, small text     → $textFont   (regular/medium weight)
 // ─────────────────────────────────────────────────────────────────────────────
 
 $titleFont:  var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
@@ -24,14 +19,14 @@ $blackflat:  #1a2a3a;
 $white:      #FFFFFF;
 $offwhite:   #f8fafc;
 
-// Greys (navy-tinted)
-$darkgrey:   #7a9bb5;
-$grey:       #4a6a85;
-$lightgrey:  #c8d8e8;
+// Greys (warm stone tint)
+$darkgrey:   #78716c;
+$grey:       #57534e;
+$lightgrey:  #d6d3d1;
 
-// Brand Accent
-$orange:     #f97316;
-$lightorange:#fb923c;
+// Brand Accent — warm orange ($orange primary) with stone gray support
+$orange:     #ea580c;
+$lightorange:#f97316;
 $darkorange: #c2410c;
 
 // Legacy aliases

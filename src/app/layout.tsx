@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-// Arctic Air HVAC — root layout
+// LevelWall Drywall — root layout
 //
 // MOBILE / SAFE-AREA FIX:
 //   Added a Next.js 14+ `viewport` export with:
@@ -60,21 +60,14 @@ const aBeeZee = ABeeZee({
 
 const isProduction = process.env.NODE_ENV === "production";
 const BASE_URL = isProduction
-  ? "https://www.arcticairhvac.com"
+  ? "https://www.levelwalldrywall.com"
   : "http://localhost:3000";
 
 // ── VIEWPORT ──────────────────────────────────────────────────────────────────
-// Next.js 14+ moved viewport / themeColor / colorScheme out of `metadata` and
-// into a separate `viewport` export. The `viewportFit: 'cover'` is the single
-// most important line in this file for the notch / home-indicator fix.
 export const viewport: Viewport = {
   width:        "device-width",
   initialScale: 1,
   viewportFit:  "cover",
-  // Two themeColor entries so iOS Safari can pick the right one when the user
-  // toggles light/dark mode. Both are obsidian dark to match the brand bg
-  // applied to <body> in globals.css. Adjust if you want a lighter Safari
-  // chrome tint for light-mode users.
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#0d1b2a" },
     { media: "(prefers-color-scheme: dark)",  color: "#0d1b2a" },
@@ -85,42 +78,42 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Arctic Air HVAC | AC Repair, Heating & Installation — Waco, TX",
-    template: "%s | Arctic Air HVAC",
+    default: "LevelWall Drywall | Hang · Tape · Texture · Repair — Waco, TX",
+    template: "%s | LevelWall Drywall",
   },
   description:
-    "Arctic Air HVAC is a Waco, TX heating and cooling company offering AC repair, furnace service, new system installation, duct cleaning, and maintenance plans for Central Texas homes and businesses. Licensed, local, no contracts.",
+    "LevelWall Drywall is a Waco, TX drywall company offering drywall hanging, taping & finishing, texture matching, water damage drywall, popcorn ceiling removal, and patch & repair for Central Texas homes and businesses. Pro drywall contractors, bonded & insured.",
   keywords: [
-    "Arctic Air HVAC",
-    "HVAC company Waco TX",
-    "AC repair Waco Texas",
-    "air conditioning installation Waco",
-    "furnace repair Central Texas",
-    "heating and cooling Waco TX",
-    "HVAC contractor Hewitt TX",
-    "duct cleaning Waco",
-    "emergency AC repair Waco",
+    "LevelWall Drywall",
+    "drywall contractor Waco TX",
+    "drywall work Waco Texas",
+    "taping & finishing Central Texas",
+    "water damage drywall Waco",
+    "patch and repair drywall contractor Waco TX",
+    "texture matching Hewitt TX",
+    "popcorn ceiling removal Temple TX",
+    "drywall contractor Killeen",
   ],
-  authors: [{ name: "Arctic Air HVAC", url: BASE_URL }],
-  creator: "Arctic Air HVAC",
-  publisher: "Arctic Air HVAC",
+  authors: [{ name: "LevelWall Drywall", url: BASE_URL }],
+  creator: "LevelWall Drywall",
+  publisher: "LevelWall Drywall",
   icons: {
     icon: [`${BASE_URL}/logos/favicon.ico?v=1`],
     apple: [`${BASE_URL}/logos/apple-touch-icon.png?v=1`],
     shortcut: [`${BASE_URL}/logos/apple-touch-icon.png?v=1`],
   },
   openGraph: {
-    title: "Arctic Air HVAC | AC Repair, Heating & Installation — Waco, TX",
+    title: "LevelWall Drywall | Hang · Tape · Texture · Repair — Waco, TX",
     description:
-      "Waco-based HVAC company for AC repair, furnace service, new installations, and maintenance plans across Central Texas. Licensed & insured. No contracts.",
+      "Waco-based drywall contractor for drywall hanging, taping & finishing, texture matching, water damage drywall, popcorn removal, and patch & repair across Central Texas. Bonded & insured.",
     url: BASE_URL,
-    siteName: "Arctic Air HVAC",
+    siteName: "LevelWall Drywall",
     images: [
       {
-        url: `${BASE_URL}/logos/arctic-air-banner.png?v=1`,
+        url: `${BASE_URL}/logos/scott-apps-banner.png?v=1`,
         width: 1200,
         height: 630,
-        alt: "Arctic Air HVAC — Waco TX Air Conditioning & Heating",
+        alt: "LevelWall Drywall — Waco TX Drywall Work",
       },
     ],
     locale: "en_US",
@@ -128,10 +121,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arctic Air HVAC | Waco TX Heating & Cooling",
+    title: "LevelWall Drywall | Waco TX Drywall Work",
     description:
-      "AC repair, heating service, new installations & maintenance plans for Central Texas. Licensed & insured — no contracts.",
-    images: [`${BASE_URL}/logos/arctic-air-banner.png?v=1`],
+      "Drywall hanging, taping, texture matching & patch repair for Central Texas. Pro drywall contractors — bonded & insured.",
+    images: [`${BASE_URL}/logos/scott-apps-banner.png?v=1`],
   },
   robots: {
     index: true,
@@ -155,33 +148,33 @@ const ratingValue = "5.0";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "HVACBusiness",
+  "@type": "HomeAndConstructionBusiness",
   "@id": `${BASE_URL}/#organization`,
-  name: "Arctic Air HVAC",
-  alternateName: "Arctic Air Heating & Cooling",
+  name: "LevelWall Drywall",
+  alternateName: "LevelWall Drywall Waco",
   description:
-    "Residential and commercial HVAC services in Waco and Central Texas — AC repair, heating, new installations, duct cleaning, and maintenance plans. Licensed, insured, no contracts.",
+    "Residential and light commercial drywall services in Waco and Central Texas — drywall hanging, taping & finishing, texture matching, water damage drywall, popcorn ceiling removal, and patch & repair. pro drywall crews, bonded & insured, Smooth Finish Guarantee · 2-Year Workmanship.",
   url: BASE_URL,
-  telephone: "+12549001234",
-  email: "contact@arcticairhvac.com",
-  foundingDate: "2010",
+  telephone: "+12549701818",
+  email: "hello@levelwalldrywall.com",
+  foundingDate: "2009",
   founder: {
     "@type": "Person",
-    name: "Mike Hawkins",
-    jobTitle: "Owner & Master HVAC Technician",
+    name: "Mitch Rowan",
+    jobTitle: "Owner & Lead Drywall Contractor",
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "4521 Bosque Blvd",
+    streetAddress: "2100 N 25th St",
     addressLocality: "Waco",
     addressRegion: "TX",
-    postalCode: "76710",
+    postalCode: "76708",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 31.5493,
-    longitude: -97.1469,
+    latitude: 31.5652,
+    longitude: -97.1467,
   },
   openingHoursSpecification: [
     {
@@ -201,24 +194,22 @@ const localBusinessSchema = {
     { "@type": "City", name: "Waco",        containedInPlace: { "@type": "State", name: "Texas" } },
     { "@type": "City", name: "Hewitt",       containedInPlace: { "@type": "State", name: "Texas" } },
     { "@type": "City", name: "Woodway",      containedInPlace: { "@type": "State", name: "Texas" } },
-    { "@type": "City", name: "Robinson",     containedInPlace: { "@type": "State", name: "Texas" } },
+    { "@type": "City", name: "Bellmead",     containedInPlace: { "@type": "State", name: "Texas" } },
     { "@type": "City", name: "China Spring", containedInPlace: { "@type": "State", name: "Texas" } },
-    { "@type": "City", name: "Hillsboro",    containedInPlace: { "@type": "State", name: "Texas" } },
+    { "@type": "City", name: "McGregor",     containedInPlace: { "@type": "State", name: "Texas" } },
     { "@type": "City", name: "Temple",       containedInPlace: { "@type": "State", name: "Texas" } },
     { "@type": "City", name: "Killeen",      containedInPlace: { "@type": "State", name: "Texas" } },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "HVAC Services",
+    name: "Drywall Services",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AC Repair" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AC Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heating Repair" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Furnace Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Duct Cleaning" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "HVAC Maintenance Plans" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Indoor Air Quality" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Smart Thermostat Installation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Hanging" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Taping & Finishing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Texture Matching" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Damage Drywall" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Popcorn Ceiling Removal" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Patch & Repair" } },
     ],
   },
   aggregateRating: {
@@ -232,7 +223,7 @@ const localBusinessSchema = {
   currenciesAccepted: "USD",
   paymentAccepted: "Cash, Credit Card, Check, Financing",
   sameAs: [
-    "https://www.facebook.com/arcticairhvac",
+    "https://www.facebook.com/levelwalldrywall",
     "https://www.google.com/maps/?cid=placeholder",
   ],
 };
@@ -254,12 +245,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {/* ConditionalShell shows Header/Footer only on non-admin pages */}
         <ConditionalShell>
           <Header />
         </ConditionalShell>
 
-        <NextTopLoader color="#f97316" showSpinner={false} />
+        <NextTopLoader color="#ea580c" showSpinner={false} />
 
         <Suspense fallback={null}>
           <Analytics />
@@ -275,10 +265,10 @@ export default function RootLayout({
                   alignItems: "center",
                   width: "100%",
                   height: "100vh",
-                  background: "#0a130a",
+                  background: "#0d1b2a",
                 }}
               >
-                <PulseLoader size={50} color="#f97316" />
+                <PulseLoader size={50} color="#ea580c" />
               </div>
             }
           >
@@ -294,7 +284,6 @@ export default function RootLayout({
           <CookieBanner />
         </Suspense>
 
-        {/* Footer only on non-admin pages */}
         <ConditionalShell>
           <Footer />
         </ConditionalShell>
