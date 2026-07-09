@@ -35,36 +35,42 @@ export default function HomePage() {
       title: "Drywall Hanging",
       body: "Straight hangs, tight joints, and square corners — new construction, remodels, and room additions.",
       link: "/services/drywall-hanging",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faBrush,
       title: "Taping & Finishing",
       body: "Tape, mud, and sand through Level 4/5 so walls and ceilings take paint without telegraphing seams.",
       link: "/services/taping-finishing",
+      image: "/pages/home/services/service-2.jpg",
     },
     {
       icon: faSprayCan,
       title: "Texture Matching",
       body: "Orange peel, knockdown, skip trowel, and smooth — blended so patches disappear after paint.",
       link: "/services/texture-matching",
+      image: "/pages/home/services/service-3.jpg",
     },
     {
       icon: faWater,
       title: "Water Damage Drywall",
       body: "Cut-out, dry cavity, hang, tape, and finish after leaks or storms — insurance-friendly documentation.",
       link: "/services/water-damage-drywall",
+      image: "/pages/home/services/service-4.jpg",
     },
     {
       icon: faBorderAll,
       title: "Popcorn Ceiling Removal",
       body: "Safe scrape, skim, and smooth finish for a modern look — paint-ready when we leave.",
       link: "/services/popcorn-removal",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faClipboardList,
       title: "Patch & Repair",
       body: "Holes, cracks, corner bead, and nail pops fixed cleanly with texture match and 2-year workmanship.",
       link: "/services/patch-repair",
+      image: "/pages/home/services/service-2.jpg",
     },
   ];
 
@@ -180,13 +186,10 @@ export default function HomePage() {
 
   return (
     <main className={styles.pageWrapper}>
-
       <WelcomePage />
-
       <TrustBar
         headline="Waco's trusted drywall crew — bonded, and warrantied on every finish"
       />
-
       <div className={styles.section}>
         <ServiceCardComponent
           heading="Drywall Done Level"
@@ -194,56 +197,46 @@ export default function HomePage() {
           cards={services}
         />
       </div>
-
       <div className={styles.section}>
         <ImpactMetrics metrics={metrics} cityName="Waco" />
       </div>
-
       <div className={styles.section}>
         <WhyChooseUs cityName="Waco" features={whyFeatures} />
       </div>
-
       <div className={styles.section}>
         <ProcessTimeline steps={processSteps} />
       </div>
-
-      <div className={styles.section}>
-        <WhatToExpect expectations={expectations} />
-      </div>
-
-      <div className={styles.section}>
-        <GuaranteeSection />
-      </div>
-
       <div className={styles.section}>
         <Testimonials testimonials={reviews} />
       </div>
-
+      <CTABanner
+        headline="Walls Level. Texture Matched."
+        subline="Patch, texture match, and full-room drywall — clean containment and paint-ready finishes."
+        primaryText="Call (254) 970-1818"
+        primaryLink="tel:+12549701818"
+        secondaryText="Get Patch Quote"
+        secondaryLink="/contact"
+      
+        imageSrc="/pages/home/welcome/hero-main.jpg"
+       />
+      <div className={styles.section}>
+        <GuaranteeSection />
+      </div>
       <div className={styles.section}>
         <LocalServiceAreas cityName="Waco" areas={localAreas} />
       </div>
-
+      <div className={styles.section}>
+        <WhatToExpect expectations={expectations} />
+      </div>
       <div className={styles.section}>
         <FAQ cityName="Waco" faq={faq} title="Drywall Service FAQs" />
       </div>
-
       <div className={styles.section}>
         <BlogPreviewGrid />
       </div>
-
-      <CTABanner
-        headline="Ready for a Smooth, Level Finish?"
-        subline="Upfront quotes. Pro drywall crews. Call (254) 970-1818."
-        primaryText="Call (254) 970-1818"
-        primaryLink="tel:+12549701818"
-        secondaryText="Book Online"
-        secondaryLink="/contact"
-      />
-
       <div className={styles.section}>
         <Variant4 title="Request a Free Estimate" cityName="Waco" slug="home" spot="home-form" formVariant={4} />
       </div>
-
     </main>
   );
 }

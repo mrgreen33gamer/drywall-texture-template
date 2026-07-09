@@ -19,7 +19,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Repairs',
     date:     'July 3, 2026',
     readTime: 7,
-    imageSrc: '/pages/blogs/energy-savings.jpg',
+    imageSrc: '/pages/home/welcome/after.jpg',
     imageAlt: 'Drywall texture matching after patch work in Central Texas',
     featured: true,
   },
@@ -30,7 +30,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Guides',
     date:     'June 24, 2026',
     readTime: 6,
-    imageSrc: '/pages/blogs/maintenance-plan.jpg',
+    imageSrc: '/pages/home/services/service-3.jpg',
     imageAlt: 'Popcorn ceiling removal cost guide for Central Texas',
   },
   {
@@ -40,7 +40,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Education',
     date:     'June 15, 2026',
     readTime: 8,
-    imageSrc: '/pages/blogs/ac-replacement.jpg',
+    imageSrc: '/pages/home/welcome/hero-main.jpg',
     imageAlt: 'Drywall versus plaster repair comparison for Texas homes',
   },
 ];
