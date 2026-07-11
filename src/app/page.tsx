@@ -63,14 +63,14 @@ export default function HomePage() {
       title: "Popcorn Ceiling Removal",
       body: "Safe scrape, skim, and smooth finish for a modern look — paint-ready when we leave.",
       link: "/services/popcorn-removal",
-      image: "/pages/home/services/service-1.jpg",
+      image: "/pages/home/welcome/before.jpg",
     },
     {
       icon: faClipboardList,
       title: "Patch & Repair",
       body: "Holes, cracks, corner bead, and nail pops fixed cleanly with texture match and 2-year workmanship.",
       link: "/services/patch-repair",
-      image: "/pages/home/services/service-2.jpg",
+      image: "/pages/home/welcome/after.jpg",
     },
   ];
 

@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     siteName: "LevelWall Drywall",
     images: [
       {
-        url: `${BASE_URL}/logos/scott-apps-banner.png?v=1`,
+        url: `${BASE_URL}/pages/home/welcome/hero-main.jpg`,
         width: 1200,
         height: 630,
         alt: "LevelWall Drywall — Waco TX Drywall Work",
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
     title: "LevelWall Drywall | Waco TX Drywall Work",
     description:
       "Drywall hanging, taping, texture matching & patch repair for Central Texas. Pro drywall contractors — bonded & insured.",
-    images: [`${BASE_URL}/logos/scott-apps-banner.png?v=1`],
+    images: [`${BASE_URL}/pages/home/welcome/hero-main.jpg`],
   },
   robots: {
     index: true,
