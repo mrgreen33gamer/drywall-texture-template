@@ -6,6 +6,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { PhoneIcon, ChevronIcon, CheckIcon } from './_shared/icons';
 import styles from './styles.module.scss';
@@ -110,18 +111,24 @@ const toggles = [
   { label: "Same-week", on: true },
   { label: "Warrantied", on: true }
 ];
-const textureSrc = '/pages/home/welcome/hero-main.jpg';
-const textureAlt = 'Texture';
 const accentWord = "LevelWall";
+// Photographic parallax hero — real drywall crew photography, sourced for this
+// component (see components/Pages/Home/WelcomePage/styles.module.scss for the
+// scrim + photo-card treatment).
+const heroBgSrc = '/pages/home/welcome/hero-parallax-bg.jpg';
+const photoCardSrc = '/pages/home/welcome/hero-crew-photo.jpg';
+const photoCardAlt = 'LevelWall drywall technician using a level and trowel to finish a taped seam on a job site in Waco, TX';
+const photoBadgeText = 'LevelWall Crew · On-Site';
+const photoSpecs = ['Same-Day Patches', '2-Yr Warranty'];
 
   const scrollY = useBodyScrollY();
   const smoothY = useSpring(scrollY, { stiffness: 90, damping: 28, mass: 0.4 });
 
-  const layerFarY = useTransform(smoothY, [0, 500], [0, 90]);
-  const layerMidY = useTransform(smoothY, [0, 500], [0, 50]);
-  const layerNearY = useTransform(smoothY, [0, 500], [0, 22]);
-  const textureY = useTransform(smoothY, [0, 500], [0, 70]);
-  const vignetteOpacity = useTransform(smoothY, [0, 300], [0.55, 0.85]);
+  // Scroll-linked parallax on the photographic background. document.body is the
+  // scroll container in this template (see useBodyScrollY above), so we drive the
+  // transform off that instead of framer-motion's window-based useScroll.
+  const bgY = useTransform(smoothY, [0, 600], ['0%', '14%']);
+  const bgScale = useTransform(smoothY, [0, 600], [1.06, 1.14]);
 
   const [reducedMotion, setReducedMotion] = useState(false);
   useEffect(() => {
@@ -134,35 +141,24 @@ const accentWord = "LevelWall";
 
   return (
     <section className={styles.hero} aria-label="Hero">
-      {/* Full-bleed layered texture stack */}
-      <div className={styles.layers} aria-hidden="true">
-        <motion.div
-          className={`${styles.layer} ${styles.layerFar}`}
-          style={reducedMotion ? undefined : { y: layerFarY }}
+      {/* Photographic parallax background — real drywall/taping job-site scene */}
+      <motion.div
+        className={styles.bgLayer}
+        style={reducedMotion ? undefined : { y: bgY, scale: bgScale }}
+        aria-hidden="true"
+      >
+        <Image
+          src={heroBgSrc}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={styles.bgImage}
         />
-        <motion.div
-          className={`${styles.layer} ${styles.layerMid}`}
-          style={reducedMotion ? undefined : { y: layerMidY }}
-        />
-        {textureSrc ? (
-          <motion.div
-            className={`${styles.layer} ${styles.layerTexture}`}
-            style={reducedMotion ? undefined : { y: textureY }}
-          >
-            {/* Decorative texture layer — next/image optional when adapting into a template */}
-            <img src={textureSrc} alt={textureAlt} className={styles.textureImg} />
-          </motion.div>
-        ) : null}
-        <motion.div
-          className={`${styles.layer} ${styles.layerNear}`}
-          style={reducedMotion ? undefined : { y: layerNearY }}
-        />
-        <motion.div
-          className={styles.vignette}
-          style={reducedMotion ? undefined : { opacity: vignetteOpacity }}
-        />
-        <div className={styles.grain} />
-      </div>
+      </motion.div>
+      {/* Neutral obsidian scrim keeps the photo on-brand and the headline legible */}
+      <div className={styles.scrim} aria-hidden="true" />
+      <div className={styles.grain} aria-hidden="true" />
 
       <div className={styles.layout}>
         <div className={styles.content}>
@@ -225,11 +221,38 @@ const accentWord = "LevelWall";
           </motion.div>
         </div>
 
-        {/* Spacer column preserves grid balance on wide viewports; texture shows through */}
-        <div className={styles.depthWell} aria-hidden="true">
-          <div className={styles.depthRing} />
-          <div className={styles.depthRingOuter} />
-        </div>
+        {/* Authentic drywall crew photo — the ownable image, framed as a spec card */}
+        <motion.div
+          className={styles.photoStage}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className={styles.photoCard}>
+            <Image
+              src={photoCardSrc}
+              alt={photoCardAlt}
+              fill
+              priority
+              sizes="(max-width: 960px) 88vw, 460px"
+              className={styles.photo}
+            />
+            <div className={styles.photoGlaze} aria-hidden="true" />
+
+            <div className={styles.photoBadge}>
+              <span className={styles.photoBadgeDot} />
+              {photoBadgeText}
+            </div>
+
+            <div className={styles.specCard}>
+              {photoSpecs.map((spec) => (
+                <span key={spec} className={styles.specRow}>
+                  <CheckIcon size={10} /> {spec}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
